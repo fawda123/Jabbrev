@@ -28,7 +28,7 @@ abbrev('Journal of Applied Mathematics')
 Or convert a whole .bib file:
 
 ```r
-bib_shr('refs2.bib')
+bib_shr('inst/refs2.bib')
 ```
 
 ```
