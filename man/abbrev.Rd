@@ -4,7 +4,7 @@
 \alias{abbrev}
 \title{Get the abbreviated journal title}
 \usage{
-abbrev(title, rems = c("and", "of", "\\\\&", "the"))
+abbrev(title, rems = c("and", "of", "\\\\&", "the", "on"))
 }
 \arguments{
 \item{title}{chr string of the journal name}

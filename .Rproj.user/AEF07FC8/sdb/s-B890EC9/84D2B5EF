@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#' Convert long journal names in a bib file to abbreviated\n#'\n#' @param bib_fl chr string of path to bib file\n#' @param bib_new chr string of path for new bib file with abbreviated titles, appends '_new' to input file name if blank\n#' @param trace logical to print progress to console\n#'\n#' @return A new bib file is saved, nothing is returned to the console\n#'\n#' @export\n#'\n#' @import dplyr\n#'\n#' @examples\n#' bib_shr('inst/refs2.bib')\nbib_shr <- function(bib_fl, bib_new = NULL, trace = TRUE){\n\n  # read bib file, fine lines wiht journal article names\n  fl <- readLines(bib_fl)\n  jent <- grep('journal=\\\\{[a-z,A-Z]', fl)\n\n  # loop through journal names\n  for(i in jent){\n\n    # get the long name\n    jnm_lng <- fl[i] %>%\n      gsub('^.*\\\\{|\\\\}.*$', '', .)\n\n    # get short name\n    jnms_shr <- abbrev(jnm_lng)\n\n    # print to console\n    if(trace)\n      cat(which(i == jent), 'of', length(jent), jnm_lng, '-', jnms_shr, '\\n')\n\n    # replace chr string in fl with short name\n    fl[i] <- gsub('(^.*\\\\{).*(\\\\}.*)$', paste0('\\\\1', jnms_shr, '\\\\2'), fl[i])\n\n    }\n\n  # create output file name if not provided\n  if(is.null(bib_new))\n    bib_new <- gsub('\\\\.bib$', '', bib_fl) %>%\n      paste0(., '_new.bib')\n\n  # save output\n  writeLines(fl, bib_new)\n\n}\n\n\n\n",
+    "created" : 1482273493972.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1158545364",
+    "id" : "84D2B5EF",
+    "lastKnownWriteTime" : 1482276631,
+    "last_content_update" : 1482276631666,
+    "path" : "M:/docs/Jabbrev/R/bib_shr.R",
+    "project_path" : "R/bib_shr.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

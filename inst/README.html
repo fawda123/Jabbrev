@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="README_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="README_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="README_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="README_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="README_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet"
+      href="README_files/highlight/default.css"
+      type="text/css" />
+<script src="README_files/highlight/highlight.js"></script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="README_files/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="jabbrev" class="section level2">
+<h2>Jabbrev</h2>
+<div id="marcus-w.-beck-mbafs2012gmail.com" class="section level4">
+<h4><em>Marcus W. Beck, <a href="mailto:mbafs2012@gmail.com">mbafs2012@gmail.com</a></em></h4>
+<p>This R package converts a journal name (or any text) to abbreviations using the ISSN List of Title Word Abbreviations (<a href="http://www.issn.org/services/online-services/access-to-the-ltwa/%3E">LTWA</a>). Some journals insist that journal names in bibliogoraphies are abbreviated. This is dumb so here’s a package that does it for you.</p>
+<pre class="r"><code>install.packages(&#39;devtools&#39;)
+library(devtools)
+install_github(&#39;fawda123/Jabbrev&#39;)</code></pre>
+<p>One journal at a time:</p>
+<pre class="r"><code>abbrev(&#39;Journal of Applied Mathematics&#39;)</code></pre>
+<pre><code>## [1] &quot;J. Appl. Math.&quot;</code></pre>
+<p>Or convert a whole .bib file:</p>
+<pre class="r"><code>bib_shr(&#39;refs2.bib&#39;)</code></pre>
+<pre><code>## 1 of 30 Fundamental and Applied Limnology - Fundam. Appl. Limnol. 
+## 2 of 30 Aquatic Botany - Aquat. Bot. 
+## 3 of 30 Limnology and Oceanography - Limnol. Oceanogr. 
+## 4 of 30 Ecological Engineering - Ecol. Eng. 
+## 5 of 30 Water Resources Research - Water Resour. Res. 
+## 6 of 30 Statistics Surveys - Stat. Surv. 
+## 7 of 30 Hydrological Processes - Hydrol. Process. 
+## 8 of 30 Hydrobiologia - Hydrobiol. 
+## 9 of 30 Journal of the North American Benthological Society - J. North Am. Benthol. Soc. 
+## 10 of 30 Canadian Journal of Botany - Can. J. Bot. 
+## 11 of 30 Aquatic Botany - Aquat. Bot. 
+## 12 of 30 Limnology and Oceanography: Methods - Limnol. Oceanogr. Methods 
+## 13 of 30 Water Resources Research - Water Resour. Res. 
+## 14 of 30 Journal of the American Water Resources Assocation - J. Am. Water Resour. Assocation 
+## 15 of 30 The R Journal - R J. 
+## 16 of 30 Limnology and Oceanography: Methods - Limnol. Oceanogr. Methods 
+## 17 of 30 Environmental Modelling and Assessment - Environ. Model. Assess. 
+## 18 of 30 Ecological Indicators - Ecol. Indic. 
+## 19 of 30 Ecological Indicators - Ecol. Indic. 
+## 20 of 30 Lake and Reservoir Managmenet - Lake Reserv. Manag. 
+## 21 of 30 ISPRS Journal of Photogrammetry and Remote Sensing - ISPRS J. Photogramm. Remote. Sens. 
+## 22 of 30 Aquatic Botany - Aquat. Bot. 
+## 23 of 30 Ecological Indicators - Ecol. Indic. 
+## 24 of 30 Environmental Reviews - Environ. Rev. 
+## 25 of 30 Water Research - Water Res. 
+## 26 of 30 Ecology - Ecol. 
+## 27 of 30 Science - Sci. 
+## 28 of 30 IEEE Transactions on Neuronal Networks - IEEE Trans. Neuronal Netw. 
+## 29 of 30 Water Research - Water Res. 
+## 30 of 30 Science of the Total Environment - Sci. Total. Environ.</code></pre>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

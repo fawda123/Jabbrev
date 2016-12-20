@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "---\noutput:\n  html_document:\n    keep_md: yes\n    toc: no\n    self_contained: no\n  pdf_document:\n    toc: yes\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n## Jabbrev\n\n#### *Marcus W. Beck, mbafs2012@gmail.com*\n\nThis R package converts a journal name (or any text) to abbreviations using the ISSN List of Title Word Abbreviations ([LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/>)).  Some journals insist that journal names in bibliogoraphies are abbreviated.  This is dumb so here's a package that does it for you.  \n\n```{r, eval = FALSE}\ninstall.packages('devtools')\nlibrary(devtools)\ninstall_github('fawda123/Jabbrev')\n```\n\nOne journal at a time:\n```{r message = F, echo = F, warning = F}\ndevtools::load_all(\".\")\n```\n```{r}\nabbrev('Journal of Applied Mathematics')\n```\n\nOr convert a whole .bib file:\n```{r cache = T}\nbib_shr('refs2.bib')\n```\n",
+    "created" : 1482276687473.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3713871644",
+    "id" : "112D7E8D",
+    "lastKnownWriteTime" : 1482277335,
+    "last_content_update" : 1482277334751,
+    "path" : "M:/docs/Jabbrev/inst/README.Rmd",
+    "project_path" : "inst/README.Rmd",
+    "properties" : {
+        "last_setup_crc32" : "A6FF9B03bb338d19",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

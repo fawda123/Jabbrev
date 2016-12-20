@@ -14,14 +14,13 @@
 #' abbrev('Journal of Applied Mathematics')
 #' abbrev('Fundamental and Applied Limnology')
 #' abbrev('Science')
-abbrev <- function(title, rems = c('and', 'of', '\\&', 'the')){
+abbrev <- function(title, rems = c('and', 'of', '\\&', 'the', 'on')){
 
   # remove prepositions
   rems <- paste0('^', rems, '$', collapse = '|')
-  splits <- tolower(title) %>%
-    strsplit(., '\\s') %>%
+  splits <- strsplit(title, '\\s') %>%
     unlist %>%
-    grep(rems, ., value = TRUE, invert = TRUE)
+    grep(rems, ., value = TRUE, invert = TRUE, ignore.case = TRUE)
 
   # check all as lower case
   abb[, 1] <- tolower(abb[, 1]) %>%
@@ -31,9 +30,9 @@ abbrev <- function(title, rems = c('and', 'of', '\\&', 'the')){
   short <- sapply(splits, function(x){
 
     # check if full or partial match
-    mtch <- grep(paste0('^', x, '$'), abb[, 1])
+    mtch <- grep(paste0('^', tolower(x), '$'), abb[, 1])
     if(length(mtch) == 0){
-      mtch <- pmatch(abb[, 1], x, duplicates.ok = T)
+      mtch <- pmatch(abb[, 1], tolower(x), duplicates.ok = T)
       mtch <- which(!is.na(mtch))
     }
 
@@ -44,7 +43,7 @@ abbrev <- function(title, rems = c('and', 'of', '\\&', 'the')){
       mtch <- abb[mtch, , drop = FALSE] %>%
         .[which.max(nchar(.[, 1])), 2]
     }
-    if(mtch == 'n\\.a\\.') mtch <- x
+    if(mtch == 'n.a.') mtch <- x
 
     return(mtch)
 
