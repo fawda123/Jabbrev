@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "Package: Jabbrev\nType: Package\nTitle: Convert Journal Names Between Long and Short Formats\nVersion: 0.1.0.9000\nAuthor: Marcus W. Beck [aut, cre]\nMaintainer: Marcus W. Beck <mbafs2012@gmail.com>\nDescription: Convert text strings of journal names between long \n    and abbreviated formats.  Abbreviated names are sometimes \n    required for bibliogrophies. Abbreviations are from the ISSN\n    List of Title Word Abbreviations (LTWA) available online at \n    <http://www.issn.org/services/online-services/access-to-the-ltwa/>\nBugReports: http://github.com/fawda123/Jabbrev/issues\nLicense: CC0\nEncoding: UTF-8\nLazyData: true\nDepends:\n    R (>= 3.2.0)\nAuthors@R: person(given = \"Marcus W.\", family = \"Beck\",\n    role = c(\"aut\",\"cre\"),\n    email = \"mbafs2012@gmail.com\")\n",
+    "contents" : "Package: Jabbrev\nType: Package\nTitle: Convert Journal Names Between Long and Short Formats\nVersion: 0.1.0.9000\nAuthor: Marcus W. Beck [aut, cre]\nMaintainer: Marcus W. Beck <mbafs2012@gmail.com>\nDescription: Convert text strings of journal names between long\n    and abbreviated formats.  Abbreviated names are sometimes\n    required for bibliogrophies. Abbreviations are from the ISSN\n    List of Title Word Abbreviations (LTWA) available online at\n    <http://www.issn.org/services/online-services/access-to-the-ltwa/>\nBugReports: http://github.com/fawda123/Jabbrev/issues\nLicense: CC0\nEncoding: UTF-8\nLazyData: true\nImports:\n    dplyr,\n    pdftools\nDepends:\n    R (>= 3.2.0)\nAuthors@R: person(given = \"Marcus W.\", family = \"Beck\",\n    role = c(\"aut\",\"cre\"),\n    email = \"mbafs2012@gmail.com\")\nRoxygenNote: 5.0.1\n",
     "created" : 1482187823966.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "571054905",
+    "hash" : "3238320395",
     "id" : "42553024",
-    "lastKnownWriteTime" : 1482188441,
-    "last_content_update" : 1482188441283,
+    "lastKnownWriteTime" : 1482268880,
+    "last_content_update" : 1482268880020,
     "path" : "M:/docs/Jabbrev/DESCRIPTION",
     "project_path" : "DESCRIPTION",
     "properties" : {

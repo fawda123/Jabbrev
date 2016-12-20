@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "",
+    "contents" : "pmatch(gsub('-', '', abb[, 1]), 'fundamental', duplicates.ok = T)\n  ', abb[, 1], duplicates.ok = T)\n",
     "created" : 1482190953330.000,
-    "dirty" : false,
+    "dirty" : true,
     "encoding" : "",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "2120062699",
     "id" : "8AE477B9",
     "lastKnownWriteTime" : 2315732155208049267,
-    "last_content_update" : 1482190953330,
+    "last_content_update" : 1482269928800,
     "path" : null,
     "project_path" : null,
     "properties" : {

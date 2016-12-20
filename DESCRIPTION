@@ -13,6 +13,9 @@ BugReports: http://github.com/fawda123/Jabbrev/issues
 License: CC0
 Encoding: UTF-8
 LazyData: true
+Imports:
+    dplyr,
+    pdftools
 Depends:
     R (>= 3.2.0)
 Authors@R: person(given = "Marcus W.", family = "Beck",

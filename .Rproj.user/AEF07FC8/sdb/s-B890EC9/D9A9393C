@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#' Convert a character string to title case\n#'\n#' @param s chr string for title case\n#' @param strict logical\n#'\n#' @return A chr string in title case\n#' @export\n#'\n#' @details\n#' This function is from the help file for \\code{\\link[base]{toupper}}\ncapwords <- function(s, strict = FALSE) {\n    cap <- function(s) paste(toupper(substring(s, 1, 1)),\n                  {s <- substring(s, 2); if(strict) tolower(s) else s},\n                             sep = \"\", collapse = \" \" )\n    sapply(strsplit(s, split = \" \"), cap, USE.NAMES = !is.null(names(s)))\n}\n",
+    "created" : 1482271096164.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2052998822",
+    "id" : "D9A9393C",
+    "lastKnownWriteTime" : 1482271166,
+    "last_content_update" : 1482271166864,
+    "path" : "M:/docs/Jabbrev/R/capwords.R",
+    "project_path" : "R/capwords.R",
+    "properties" : {
+        "tempName" : "Untitled3"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
