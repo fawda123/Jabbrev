@@ -1,11 +1,21 @@
 Package: Jabbrev
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Convert Journal Names Between Long and Short Formats
+Version: 0.1.0.9000
+Author: Marcus W. Beck [aut, cre]
+Maintainer: Marcus W. Beck <mbafs2012@gmail.com>
+Description: Convert text strings of journal names between long
+    and abbreviated formats.  Abbreviated names are sometimes
+    required for bibliogrophies. Abbreviations are from the ISSN
+    List of Title Word Abbreviations (LTWA) available online at
+    <http://www.issn.org/services/online-services/access-to-the-ltwa/>
+BugReports: http://github.com/fawda123/Jabbrev/issues
+License: CC0
 Encoding: UTF-8
 LazyData: true
+Depends:
+    R (>= 3.2.0)
+Authors@R: person(given = "Marcus W.", family = "Beck",
+    role = c("aut","cre"),
+    email = "mbafs2012@gmail.com")
+RoxygenNote: 5.0.1

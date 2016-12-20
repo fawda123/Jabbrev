@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\ntitle <- 'Fundamental and Applied Limnology'\n\nabb <- get_abbrev()\n",
+    "created" : 1482252752615.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "2312923961",
+    "id" : "21F39485",
+    "lastKnownWriteTime" : 565903562,
+    "last_content_update" : 1482252770455,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled3"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
