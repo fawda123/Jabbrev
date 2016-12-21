@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #### *Marcus W. Beck, mbafs2012@gmail.com*
 
-This R package converts a journal name (or any text) to abbreviations using the ISSN List of Title Word Abbreviations ([LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/>)).  Some journals insist that journal names in bibliogoraphies are abbreviated.  This is dumb so here's a package that does it for you.  
+This R package converts a journal name (or any text) to abbreviations using the ISSN List of Title Word Abbreviations ([LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/>)).  Some journals insist that journal names in bibliographies are abbreviated.  This is dumb so here's a package that does it for you.  
 
 ```{r, eval = FALSE}
 install.packages('devtools')
@@ -34,5 +34,5 @@ abbrev('Journal of Applied Mathematics')
 
 Or convert a whole .bib file:
 ```{r cache = T}
-bib_shr('inst/refs2.bib')
+bib_shr('inst/refs.bib')
 ```

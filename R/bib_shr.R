@@ -14,7 +14,7 @@
 #' bib_shr('inst/refs2.bib')
 bib_shr <- function(bib_fl, bib_new = NULL, trace = TRUE){
 
-  # read bib file, fine lines wiht journal article names
+  # read bib file, fine lines with journal article names
   fl <- readLines(bib_fl)
   jent <- grep('journal=\\{[a-z,A-Z]', fl)
 

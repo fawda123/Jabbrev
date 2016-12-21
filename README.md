@@ -5,7 +5,7 @@
 
 #### *Marcus W. Beck, mbafs2012@gmail.com*
 
-This R package converts a journal name (or any text) to abbreviations using the ISSN List of Title Word Abbreviations ([LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/>)).  Some journals insist that journal names in bibliogoraphies are abbreviated.  This is dumb so here's a package that does it for you.  
+This R package converts a journal name (or any text) to abbreviations using the ISSN List of Title Word Abbreviations ([LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/>)).  Some journals insist that journal names in bibliographies are abbreviated.  This is dumb so here's a package that does it for you.  
 
 
 ```r
@@ -28,7 +28,7 @@ abbrev('Journal of Applied Mathematics')
 Or convert a whole .bib file:
 
 ```r
-bib_shr('inst/refs2.bib')
+bib_shr('inst/refs.bib')
 ```
 
 ```
@@ -45,7 +45,7 @@ bib_shr('inst/refs2.bib')
 ## 11 of 30 Aquatic Botany - Aquat. Bot. 
 ## 12 of 30 Limnology and Oceanography: Methods - Limnol. Oceanogr. Methods 
 ## 13 of 30 Water Resources Research - Water Resour. Res. 
-## 14 of 30 Journal of the American Water Resources Assocation - J. Am. Water Resour. Assocation 
+## 14 of 30 Journal of the American Water Resources Association - J. Am. Water Resour. Assoc. 
 ## 15 of 30 The R Journal - R J. 
 ## 16 of 30 Limnology and Oceanography: Methods - Limnol. Oceanogr. Methods 
 ## 17 of 30 Environmental Modelling and Assessment - Environ. Model. Assess. 

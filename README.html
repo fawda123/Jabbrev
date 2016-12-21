@@ -125,7 +125,7 @@ $(document).ready(function () {
 <h2>Jabbrev</h2>
 <div id="marcus-w.-beck-mbafs2012gmail.com" class="section level4">
 <h4><em>Marcus W. Beck, <a href="mailto:mbafs2012@gmail.com">mbafs2012@gmail.com</a></em></h4>
-<p>This R package converts a journal name (or any text) to abbreviations using the ISSN List of Title Word Abbreviations (<a href="http://www.issn.org/services/online-services/access-to-the-ltwa/%3E">LTWA</a>). Some journals insist that journal names in bibliogoraphies are abbreviated. This is dumb so here’s a package that does it for you.</p>
+<p>This R package converts a journal name (or any text) to abbreviations using the ISSN List of Title Word Abbreviations (<a href="http://www.issn.org/services/online-services/access-to-the-ltwa/%3E">LTWA</a>). Some journals insist that journal names in bibliographies are abbreviated. This is dumb so here’s a package that does it for you.</p>
 <pre class="r"><code>install.packages(&#39;devtools&#39;)
 library(devtools)
 install_github(&#39;fawda123/Jabbrev&#39;)</code></pre>
@@ -133,7 +133,7 @@ install_github(&#39;fawda123/Jabbrev&#39;)</code></pre>
 <pre class="r"><code>abbrev(&#39;Journal of Applied Mathematics&#39;)</code></pre>
 <pre><code>## [1] &quot;J. Appl. Math.&quot;</code></pre>
 <p>Or convert a whole .bib file:</p>
-<pre class="r"><code>bib_shr(&#39;inst/refs2.bib&#39;)</code></pre>
+<pre class="r"><code>bib_shr(&#39;inst/refs.bib&#39;)</code></pre>
 <pre><code>## 1 of 30 Fundamental and Applied Limnology - Fundam. Appl. Limnol. 
 ## 2 of 30 Aquatic Botany - Aquat. Bot. 
 ## 3 of 30 Limnology and Oceanography - Limnol. Oceanogr. 
@@ -147,7 +147,7 @@ install_github(&#39;fawda123/Jabbrev&#39;)</code></pre>
 ## 11 of 30 Aquatic Botany - Aquat. Bot. 
 ## 12 of 30 Limnology and Oceanography: Methods - Limnol. Oceanogr. Methods 
 ## 13 of 30 Water Resources Research - Water Resour. Res. 
-## 14 of 30 Journal of the American Water Resources Assocation - J. Am. Water Resour. Assocation 
+## 14 of 30 Journal of the American Water Resources Association - J. Am. Water Resour. Assoc. 
 ## 15 of 30 The R Journal - R J. 
 ## 16 of 30 Limnology and Oceanography: Methods - Limnol. Oceanogr. Methods 
 ## 17 of 30 Environmental Modelling and Assessment - Environ. Model. Assess. 
