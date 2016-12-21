@@ -4,8 +4,7 @@
 \alias{bbl_ext}
 \title{Extract bib entries form a bib file that are in bbl}
 \usage{
-bbl_ext(bbl_fl = "inst/manu.bbl", bib_fl = "inst/refs_all.bib",
-  bib_new = NULL)
+bbl_ext(bbl_fl, bib_fl, bib_new = NULL)
 }
 \arguments{
 \item{bbl_fl}{chr string of bbl file with entries to extract}
@@ -24,6 +23,8 @@ Extract bib entries form a bib file that are in bbl
 This function assumes that the bib file with entries to extract based on keys in bbl includes extra entries not needed for a document.
 }
 \examples{
+\dontrun{
 bbl_ext('inst/manu.bbl', 'inst/refs_all.bib')
+}
 }
 

@@ -8,7 +8,7 @@ Description: Convert text strings of journal names between long
     and abbreviated formats.  Abbreviated names are sometimes
     required for bibliogrophies. Abbreviations are from the ISSN
     List of Title Word Abbreviations (LTWA) available online at
-    <http://www.issn.org/services/online-services/access-to-the-ltwa/>
+    <http://www.issn.org/services/online-services/access-to-the-ltwa/>.
 BugReports: http://github.com/fawda123/Jabbrev/issues
 License: CC0
 Encoding: UTF-8

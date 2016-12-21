@@ -11,7 +11,9 @@
 #' @import dplyr
 #'
 #' @examples
-#' bib_shr('inst/refs2.bib')
+#' \dontrun{
+#' bib_shr('inst/refs.bib')
+#' }
 bib_shr <- function(bib_fl, bib_new = NULL, trace = TRUE){
 
   # read bib file, fine lines with journal article names

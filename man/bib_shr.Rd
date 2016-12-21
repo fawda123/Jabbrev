@@ -20,6 +20,8 @@ A new bib file is saved, nothing is returned to the console
 Convert long journal names in a bib file to abbreviated
 }
 \examples{
-bib_shr('inst/refs2.bib')
+\dontrun{
+bib_shr('inst/refs.bib')
+}
 }
 
