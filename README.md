@@ -5,6 +5,9 @@
 
 #### *Marcus W. Beck, mbafs2012@gmail.com*
 
+[![Travis-CI Build Status](https://travis-ci.org/fawda123/Jabbrev.svg?branch=master)](https://travis-ci.org/fawda123/Jabbrev)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/fawda123/Jabbrev?branch=master&svg=true)](https://ci.appveyor.com/project/fawda123/Jabbrev)
+
 This R package converts a journal name (or any text) to abbreviations using the ISSN List of Title Word Abbreviations ([LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/>)).  Some journals insist that journal names in bibliographies are abbreviated.  This is dumb so here's a package that does it for you.  
 
 
