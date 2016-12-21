@@ -16,7 +16,9 @@
 #' A three-column matrix with the word, abbreviation, and language
 #'
 #' @examples
+#' \dontrun{
 #' get_abbrev()
+#' }
 get_abbrev <- function(url = 'http://www.issn.org/wp-content/uploads/2013/07/LTWA_20150724.pdf'){
 
   langs <- c("afr", "alb", "arm", "aze", "baq", "bel", "bos", "bre", "bul", "cat", "cor", "cos", "crp", "cze", "dan", "dut", "eng", "est", "fin", "fre", "gem", "geo", "ger", "ger", "glg", "grc", "gre", "gre", "hrv", "hun", "ice", "iku", "ind", "ita", "kaz", "kir", "kur", "lat", "lav", "lit", "ltz", "mac", "may", "mlt", "mol", "mon", "mul", "nor", "pol", "por", "pro", "roa", "rum", "rus", "sla", "slo", "slv", "spa", "srp", "swe", "tat", "tur", "ukr", "und", "uzb", "wel", "yid", "yor")

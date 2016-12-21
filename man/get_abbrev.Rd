@@ -20,6 +20,8 @@ Get the ISSN List of Title Word Abbreviations
 The LTWA pdf is parsed from the online URL
 }
 \examples{
+\dontrun{
 get_abbrev()
+}
 }
 
