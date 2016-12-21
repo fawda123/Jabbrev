@@ -14,7 +14,7 @@
 #' abbrev('Journal of Applied Mathematics')
 #' abbrev('Fundamental and Applied Limnology')
 #' abbrev('Science')
-abbrev <- function(title, rems = c('and', 'of', '\\&', 'the', 'on')){
+abbrev <- function(title, rems = c('and', 'in', 'of', 'on', '\\&', 'the')){
 
   # remove prepositions
   rems <- paste0('^', rems, '$', collapse = '|')
