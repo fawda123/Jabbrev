@@ -1,6 +1,6 @@
 Package: Jabbrev
 Type: Package
-Title: Convert Journal Names Between Long and Short Formats
+Title: Convert Journal Names From Long to Short Formats
 Version: 0.1.0.9000
 Author: Marcus W. Beck [aut, cre]
 Maintainer: Marcus W. Beck <mbafs2012@gmail.com>
