@@ -20,8 +20,10 @@
 bbl_ext <- function(bbl_fl, bib_fl, bib_new = NULL){
 
   # keys from bbl_file
-  keys <- readLines(bbl_fl) %>%
-    grep(']\\{.*\\}$', ., value = T) %>%
+  keys <- readLines(bbl_fl)
+  first <- grep('bibitem', keys)[1]
+  keys <- keys[first:length(keys)] %>% 
+    grep(']\\{.*\\}$', ., value = TRUE) %>%
     gsub('.*\\{(.*)\\}$', '\\1', .)
 
   # get bib entries from bib_fl
@@ -34,8 +36,11 @@ bbl_ext <- function(bbl_fl, bib_fl, bib_new = NULL){
     str <- grep(paste0(x, ','), fl)
     stp <- grep('@', fl[str:length(fl)])[2]
 
-    out <- fl[str:(str + stp - 2)] %>%
+    out <- try({fl[str:(str + stp - 2)] %>%
       .[. != '']
+    })
+    
+    
 
     out
 
