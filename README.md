@@ -15,6 +15,7 @@ This R package converts a journal name (or any text) to abbreviations using the 
 install.packages('devtools')
 library(devtools)
 install_github('fawda123/Jabbrev')
+library(Jabbrev)
 ```
 
 One journal at a time:

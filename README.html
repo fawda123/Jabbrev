@@ -4,7 +4,7 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -127,7 +127,8 @@ $(document).ready(function () {
 <p>This R package converts a journal name (or any text) to abbreviations using the ISSN List of Title Word Abbreviations (<a href="http://www.issn.org/services/online-services/access-to-the-ltwa/%3E">LTWA</a>). Some journals insist that journal names in bibliographies are abbreviated. This is dumb so here’s a package that does it for you.</p>
 <pre class="r"><code>install.packages(&#39;devtools&#39;)
 library(devtools)
-install_github(&#39;fawda123/Jabbrev&#39;)</code></pre>
+install_github(&#39;fawda123/Jabbrev&#39;)
+library(Jabbrev)</code></pre>
 <p>One journal at a time:</p>
 <pre class="r"><code>abbrev(&#39;Journal of Applied Mathematics&#39;)</code></pre>
 <pre><code>## [1] &quot;J. Appl. Math.&quot;</code></pre>
@@ -189,7 +190,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
