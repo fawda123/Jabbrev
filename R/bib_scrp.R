@@ -20,12 +20,14 @@ bib_scrp <- function(rmd_in, bib_new = 'refs.bib', ext_bib = 'https://raw.github
 
   # rmd tags
   tgs <- readLines(rmd_in) %>%
-    .[grep('\\[@', .)] %>%
-    gsub('.*(\\[@.*\\]).*', '\\1', .) %>%
-    gsub('\\[|\\]|@', '', .) %>%
+    .[grep("\\[@", .)] %>%
+    regmatches(., gregexpr("\\[@.*?\\]", .)) %>% # gregexpr gets starting index and length of all matches, regmatches returns text indexed by gregexpr
+    unlist %>%
+    gsub('\\[|\\]|\\@', '', .) %>%
     strsplit(., ';') %>%
     unlist %>%
-    unique
+    unique %>%
+    sort
 
   # references to scrape
   refs <- readLines(ext_bib)
