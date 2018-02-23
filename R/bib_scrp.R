@@ -24,7 +24,8 @@ bib_scrp <- function(rmd_in, bib_new = 'refs.bib', ext_bib = 'https://raw.github
     gsub('.*(\\[@.*\\]).*', '\\1', .) %>%
     gsub('\\[|\\]|@', '', .) %>%
     strsplit(., ';') %>%
-    unlist
+    unlist %>%
+    unique
 
   # references to scrape
   refs <- readLines(ext_bib)
