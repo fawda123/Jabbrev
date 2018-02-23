@@ -22,4 +22,3 @@ abbrev('Journal of Applied Mathematics')
 abbrev('Fundamental and Applied Limnology')
 abbrev('Science')
 }
-

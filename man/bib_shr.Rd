@@ -24,4 +24,3 @@ Convert long journal names in a bib file to abbreviated
 bib_shr('inst/refs.bib')
 }
 }
-

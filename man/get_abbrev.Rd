@@ -24,4 +24,3 @@ The LTWA pdf is parsed from the online URL
 get_abbrev()
 }
 }
-

@@ -17,4 +17,3 @@ Original abbrevations are from http://www.issn.org/wp-content/uploads/2013/07/LT
 The matrix was parsed from the website using \code{\link{get_abbrev}} and is used in \code{\link{abbrev}}.
 }
 \keyword{datasets}
-

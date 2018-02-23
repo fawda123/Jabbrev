@@ -27,4 +27,3 @@ This function assumes that the bib file with entries to extract based on keys in
 bbl_ext('inst/manu.bbl', 'inst/refs_all.bib')
 }
 }
-

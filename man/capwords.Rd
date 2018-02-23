@@ -20,4 +20,3 @@ Convert a character string to title case
 \details{
 This function is from the help file for \code{\link[base]{toupper}}
 }
-
