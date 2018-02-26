@@ -21,11 +21,9 @@ bib_scrp <- function(rmd_in, bib_new = 'refs.bib', ext_bib = 'https://raw.github
   # rmd tags
   tgs <- readLines(rmd_in) %>%
     .[grep("\\[@", .)] %>%
-    regmatches(., gregexpr("\\[@.*?\\]", .)) %>% # gregexpr gets starting index and length of all matches, regmatches returns text indexed by gregexpr
+    regmatches(., gregexpr("@.*?[^a-zA-Z0-9]", .)) %>% # gregexpr gets starting index and length of all matches, regmatches returns text indexed by gregexpr
     unlist %>%
-    gsub('\\[|\\]|\\@', '', .) %>%
-    strsplit(., ';') %>%
-    unlist %>%
+    gsub('[^a-zA-Z0-9]', '', .) %>%
     unique %>%
     sort
 
