@@ -23,6 +23,7 @@ bib_scrp <- function(rmd_in, bib_new = 'refs.bib', ext_bib = 'https://raw.github
     .[grep("\\[@", .)] %>%
     regmatches(., gregexpr("@.*?[^a-zA-Z0-9]", .)) %>% # gregexpr gets starting index and length of all matches, regmatches returns text indexed by gregexpr
     unlist %>%
+    .[!grepl('^@ref\\($', .)] %>% # remove bookdown ref tags
     gsub('[^a-zA-Z0-9]', '', .) %>%
     unique %>%
     sort
