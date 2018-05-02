@@ -2,7 +2,7 @@
 % Please edit documentation in R/bib_scrp.R
 \name{bib_scrp}
 \alias{bib_scrp}
-\title{Find bibtex tags in a document, scrape entires from external bib file, save new}
+\title{Find bibtex tags in a document, scrape entries from external bib file, save new}
 \usage{
 bib_scrp(rmd_in, bib_new = "refs.bib",
   ext_bib = "https://raw.githubusercontent.com/fawda123/refs/master/refs.bib")
@@ -12,13 +12,13 @@ bib_scrp(rmd_in, bib_new = "refs.bib",
 
 \item{bib_new}{path for output .bib file}
 
-\item{ext_bib}{chr string of url for external bib file to scrap}
+\item{ext_bib}{chr string of url for external bib file to scrape}
 }
 \value{
 A new bib file is saved, nothing is returned to the console
 }
 \description{
-Find bibtex tags in a document, scrape entires from external bib file, save new
+Find bibtex tags in a document, scrape entries from external bib file, save new
 }
 \details{
 Currently only works for .Rmd files with the Rmarkdown format of bibtex tags, e.g., \code{[@Jones18]}.  The user must also check the external bib file to make sure all tags in the .Rmd file are present.

@@ -15,7 +15,8 @@ Encoding: UTF-8
 LazyData: true
 Imports:
     dplyr,
-    pdftools
+    pdftools, 
+    tools
 Depends:
     R (>= 3.2.0)
 Authors@R: person(given = "Marcus W.", family = "Beck",

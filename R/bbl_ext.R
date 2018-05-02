@@ -1,8 +1,9 @@
-#' Extract bib entries form a bib file that are in bbl
+#' Extract bib entries from a bib file that are in bbl
 #'
 #' @param bbl_fl chr string of bbl file with entries to extract
 #' @param bib_fl chr string of bib file for all entries
 #' @param bib_new chr string of path for new bib file with abbreviated titles, appends '_kp' to input file name if blank
+#' @param titlecase logical indicating if the title field is converted to titlecase, not perfect so make sure to check final entries manually
 #'
 #' @return A new bib file is saved, nothing is returned to the console
 #'
@@ -17,12 +18,12 @@
 #' \dontrun{
 #' bbl_ext('inst/manu.bbl', 'inst/refs_all.bib')
 #' }
-bbl_ext <- function(bbl_fl, bib_fl, bib_new = NULL){
+bbl_ext <- function(bbl_fl, bib_fl, bib_new = NULL, titlecase = FALSE){
 
   # keys from bbl_file
   keys <- readLines(bbl_fl)
   first <- grep('bibitem', keys)[1]
-  keys <- keys[first:length(keys)] %>% 
+  keys <- keys[first:length(keys)] %>%
     grep(']\\{.*\\}$', ., value = TRUE) %>%
     gsub('.*\\{(.*)\\}$', '\\1', .)
 
@@ -39,13 +40,25 @@ bbl_ext <- function(bbl_fl, bib_fl, bib_new = NULL){
     out <- try({fl[str:(str + stp - 2)] %>%
       .[. != '']
     })
-    
-    
 
-    out
+    return(out)
 
   }) %>%
   do.call('c', .)
+
+  # convert titles to title case
+  if(titlecase){
+
+    titles <- refs[grepl('title\\s*=', refs)] %>%
+      gsub('\\t|title|\\s*=\\s*\\{|},$', '', .) %>%
+      gsub('^\\s*', '', .) %>%
+      gsub('\\{|\\}', '', .) %>%
+      tools::toTitleCase(.) %>%
+      paste0('\ttitle={{', . , '}},')
+
+    refs[grepl('title\\s*=', refs)] <- titles
+
+  }
 
   # create output file name if not provided
   if(is.null(bib_new))

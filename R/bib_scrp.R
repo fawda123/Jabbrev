@@ -1,8 +1,8 @@
-#' Find bibtex tags in a document, scrape entires from external bib file, save new
+#' Find bibtex tags in a document, scrape entries from external bib file, save new
 #'
 #' @param rmd_in chr string of path to Rmd file
-#' @param ext_bib chr string of url for external bib file to scrap
 #' @param bib_new path for output .bib file
+#' @param ext_bib chr string of url for external bib file to scrape
 #'
 #' @details Currently only works for .Rmd files with the Rmarkdown format of bibtex tags, e.g., \code{[@Jones18]}.  The user must also check the external bib file to make sure all tags in the .Rmd file are present.
 #'
