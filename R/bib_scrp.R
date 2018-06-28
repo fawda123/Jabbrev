@@ -16,7 +16,7 @@
 #' \dontrun{
 #' bib_scrp('document.Rmd', 'refs.bib')
 #' }
-bib_scrp <- function(rmd_in, bib_new = 'refs.bib', ext_bib = 'https://raw.githubusercontent.com/fawda123/refs/master/refs.bib'){
+bib_scrp <- function(rmd_in, bib_new = 'refs.bib', ext_bib = 'https://fawda123.github.io/refs/refs.bib'){
 
   # rmd tags
   tgs <- readLines(rmd_in) %>%
@@ -29,7 +29,9 @@ bib_scrp <- function(rmd_in, bib_new = 'refs.bib', ext_bib = 'https://raw.github
     sort
 
   # references to scrape
-  refs <- readLines(ext_bib)
+  refs <- try({readLines(ext_bib)})
+  if(inherits(refs, 'try-error'))
+    stop('Unable to pull external bib from ', ext_bib)
 
   # extract bib entries from bib_fl using keys from bbl_fl
   ext <- sapply(tgs, function(x){
