@@ -50,7 +50,7 @@ bib_scrp <- function(rmd_in, bib_new = 'refs.bib', ext_bib = 'https://fawda123.g
 
     out
 
-  }) %>%
+  }, simplify = FALSE) %>%
   do.call('c', .)
 
   # check NA
