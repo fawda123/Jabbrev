@@ -59,6 +59,9 @@ bib_scrp <- function(rmd_in, bib_new = 'refs.bib', ext_bib = 'https://fawda123.g
     stop('Bib tags not found in .bib file: ', paste(names(nachk), collapse = ', '))
   }
 
+  # add preamble for non-standard year
+  ext <- c('@preamble{ " \\newcommand{\\noop}[1]{} " }', ext)
+
   # save
   writeLines(ext, bib_new)
 
