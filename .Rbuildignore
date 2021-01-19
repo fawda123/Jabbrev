@@ -5,3 +5,4 @@
 ^README.*
 ^README_files/.*
 ^README_cache/.*
+^\.github$
