@@ -2,9 +2,9 @@
 % Please edit documentation in R/bbl_ext.R
 \name{bbl_ext}
 \alias{bbl_ext}
-\title{Extract bib entries form a bib file that are in bbl}
+\title{Extract bib entries from a bib file that are in bbl}
 \usage{
-bbl_ext(bbl_fl, bib_fl, bib_new = NULL)
+bbl_ext(bbl_fl, bib_fl, bib_new = NULL, titlecase = FALSE)
 }
 \arguments{
 \item{bbl_fl}{chr string of bbl file with entries to extract}
@@ -12,12 +12,14 @@ bbl_ext(bbl_fl, bib_fl, bib_new = NULL)
 \item{bib_fl}{chr string of bib file for all entries}
 
 \item{bib_new}{chr string of path for new bib file with abbreviated titles, appends '_kp' to input file name if blank}
+
+\item{titlecase}{logical indicating if the title field is converted to titlecase, not perfect so make sure to check final entries manually}
 }
 \value{
 A new bib file is saved, nothing is returned to the console
 }
 \description{
-Extract bib entries form a bib file that are in bbl
+Extract bib entries from a bib file that are in bbl
 }
 \details{
 This function assumes that the bib file with entries to extract based on keys in bbl includes extra entries not needed for a document.
@@ -27,4 +29,3 @@ This function assumes that the bib file with entries to extract based on keys in
 bbl_ext('inst/manu.bbl', 'inst/refs_all.bib')
 }
 }
-

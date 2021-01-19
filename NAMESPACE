@@ -2,6 +2,7 @@
 
 export(abbrev)
 export(bbl_ext)
+export(bib_scrp)
 export(bib_shr)
 export(capwords)
 export(get_abbrev)
