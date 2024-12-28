@@ -9,7 +9,6 @@
 #'
 #' @export
 #'
-#' @import dplyr
 #'
 #' @details
 #' This function assumes that the bib file with entries to extract based on keys in bbl includes extra entries not needed for a document.

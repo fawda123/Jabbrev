@@ -10,7 +10,6 @@
 #'
 #' @export
 #'
-#' @import dplyr
 #'
 #' @examples
 #' \dontrun{

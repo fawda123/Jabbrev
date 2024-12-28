@@ -21,4 +21,5 @@ Get the abbreviated journal title
 abbrev('Journal of Applied Mathematics')
 abbrev('Fundamental and Applied Limnology')
 abbrev('Science')
+abbrev('Journal of the Royal Statistical Society: Series D (The Statistician)')
 }

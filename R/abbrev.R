@@ -8,14 +8,15 @@
 #' @return A chr string for the abbreviated journal title
 #' @export
 #'
-#' @import dplyr
 #'
 #' @examples
 #' abbrev('Journal of Applied Mathematics')
 #' abbrev('Fundamental and Applied Limnology')
 #' abbrev('Science')
+#' abbrev('Journal of the Royal Statistical Society: Series D (The Statistician)')
 abbrev <- function(title, rems = c('and', 'in', 'of', 'on', '\\\\&', 'the')){
-
+  title='Journal of the Royal Statistical Society: Series D (The Statistician)'
+  rems = c('and', 'in', 'of', 'on', '\\\\&', 'the')
   # remove prepositions
   rems <- paste0('^', rems, '$', collapse = '|')
   splits <- strsplit(title, '\\s') %>%
@@ -28,7 +29,8 @@ abbrev <- function(title, rems = c('and', 'in', 'of', 'on', '\\\\&', 'the')){
 
   # get abbreviations
   short <- sapply(splits, function(x){
-
+    # keep only alphanumeric symbols
+    x <- gsub("[^[:alnum:] ]", "", x)
     # check if full or partial match
     mtch <- grep(paste0('^', tolower(x), '$'), abb[, 1])
     if(length(mtch) == 0){
