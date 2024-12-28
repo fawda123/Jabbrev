@@ -15,8 +15,7 @@
 #' abbrev('Science')
 #' abbrev('Journal of the Royal Statistical Society: Series D (The Statistician)')
 abbrev <- function(title, rems = c('and', 'in', 'of', 'on', '\\\\&', 'the')){
-  title='Journal of the Royal Statistical Society: Series D (The Statistician)'
-  rems = c('and', 'in', 'of', 'on', '\\\\&', 'the')
+
   # remove prepositions
   rems <- paste0('^', rems, '$', collapse = '|')
   splits <- strsplit(title, '\\s') %>%
