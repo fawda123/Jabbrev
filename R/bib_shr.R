@@ -17,7 +17,7 @@ bib_shr <- function(bib_fl, bib_new = NULL, trace = TRUE){
 
   # read bib file, fine lines with journal article names
   fl <- readLines(bib_fl)
-  jent <- grep('journal=\\{[a-z,A-Z]', fl)
+  jent <- grep('journal\\s?=\\s?\\{[a-z,A-Z]', fl)
 
   # loop through journal names
   for(i in jent){
