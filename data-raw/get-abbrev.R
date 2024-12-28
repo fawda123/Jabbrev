@@ -9,3 +9,4 @@ abb <- get_abbrev_tsv()
 
 # careful, this will overwrite your data!
 usethis::use_data(abb, overwrite = TRUE)
+usethis::use_data(abb, overwrite = TRUE, internal = TRUE)
