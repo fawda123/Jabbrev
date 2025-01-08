@@ -8,8 +8,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Jabbrev
 
-[![R-CMD-check](https://github.com/fawda123/Jabbrev/workflows/R-CMD-check/badge.svg)](https://github.com/fawda123/Jabbrev/actions)
-
+[![R-CMD-check](https://github.com/fawda123/Jabbrev/actions/workflows/R-CMD-check/badge.svg)](https://github.com/fawda123/Jabbrev/actions/workflows/R-CMD-check)
+ 
 This R package converts a journal name (or any text) to abbreviations using the ISSN List of Title Word Abbreviations ([LTWA](https://www.issn.org/services/online-services/access-to-the-ltwa/), available as a [csv file](https://www.issn.org/wp-content/uploads/2024/02/ltwa_current.csv)).  Some journals insist that journal names in bibliographies are abbreviated.  This is dumb so here's a package that does it for you.  
 
 ```{r, eval = FALSE}
