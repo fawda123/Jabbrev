@@ -4,8 +4,11 @@
 \alias{bib_scrp}
 \title{Find bibtex tags in a document, scrape entries from external bib file, save new}
 \usage{
-bib_scrp(rmd_in, bib_new = "refs.bib",
-  ext_bib = "https://fawda123.github.io/refs/refs.bib")
+bib_scrp(
+  rmd_in,
+  bib_new = "refs.bib",
+  ext_bib = "https://fawda123.github.io/refs/refs.bib"
+)
 }
 \arguments{
 \item{rmd_in}{chr string of path to Rmd file}
