@@ -1,7 +1,7 @@
 
 ## Jabbrev
 
-[![R-CMD-check](https://github.com/fawda123/Jabbrev/actions/workflows/R-CMD-check/badge.svg)](https://github.com/fawda123/Jabbrev/actions/workflows/R-CMD-check)
+[![R-CMD-check](https://github.com/fawda123/Jabbrev/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/fawda123/Jabbrev/actions/workflows/R-CMD-check.yaml)
 
 This R package converts a journal name (or any text) to abbreviations
 using the ISSN List of Title Word Abbreviations
