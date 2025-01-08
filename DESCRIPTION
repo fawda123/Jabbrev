@@ -1,7 +1,7 @@
 Package: Jabbrev
 Type: Package
 Title: Convert Journal Names From Long to Short Formats
-Version: 0.1.0.9000
+Version: 1.0.0
 Author: Marcus W. Beck [aut, cre]
 Maintainer: Marcus W. Beck <mbafs2012@gmail.com>
 Description: Convert text strings of journal names between long
@@ -18,7 +18,15 @@ Imports:
     tools
 Depends:
     R (>= 3.2.0)
-Authors@R: person(given = "Marcus W.", family = "Beck",
-    role = c("aut","cre"),
-    email = "mbafs2012@gmail.com")
+Authors@R: c(
+    person(
+      given = "Marcus W.", family = "Beck",
+      role = c("aut","cre"),
+      email = "mbafs2012@gmail.com"
+    ),
+	  person(given = "Dmytro", family = "Perepolkin",
+      role = c("aut"),
+      email = "dperepolkin@gmail.com"
+    )
+  ) 
 RoxygenNote: 7.3.1
