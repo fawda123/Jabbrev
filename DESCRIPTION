@@ -17,7 +17,7 @@ Imports:
     magrittr,
     tools
 Depends:
-    R (>= 3.2.0)
+    R (>= 3.5)
 Authors@R: c(
     person(
       given = "Marcus W.", family = "Beck",
